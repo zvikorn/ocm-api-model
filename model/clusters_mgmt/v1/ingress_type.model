@@ -14,20 +14,20 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// Representation of an ingress.
+// Set of predefined properties of an Ingress object.
 class Ingress {
-	// ID used to identify the cluster that this ingress is attached to. 
-	link Cluster Cluster
+	// ID
+	ID String
 
-	// Indicates if this is the default ingress.
-	Default Boolean
+	// The ID of the cluster that the router shard is attached to
+    ClusterID String
 
-	// Listening method of the ingress
-	Listening ListeningMethod
+	// The listening method used for determining whether the ingress is internal or external
+    Listening ListeningMethod
 
-	// DNS Name of the ingress.
-	DNSName string
+    Default        Boolean
 
-	// A set of labels for the ingress. 
-	RouteSelectors [String]String
+    DNSName        String
+
+    RouteSelectors [String]String
 }
